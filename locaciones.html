@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Diseño y nuevos medios, segunda versión remota" />
+        <title>EVALUACIÓN Nº2 &#127909;</title>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <nav>
+                <p><a href="index.html">Portada</a> <a href="peliculas.html">Películas</a> <a href="locaciones.html" class="active">Locaciones</a> <a href="ganancias.html">Ganancias</a></p>
+            </nav>
+            <main>
+                <div id="mapa">
+                    <!--acá se mete el mapa-->
+                </div>
+            </main>
+            <footer>
+               <p><a href="https://github.com/margaraitavialm">Margarita Vial</a> <a href="https://github.com/profesorfaco/dno037-2021">DNO037</a></p>
+
+            </footer>
+        </div>
+<script>
+
+    var mymap = L.map('mapa').setView([33.5427796,9.9672612], 2);
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+        maxZoom: 18,
+        id: 'mapbox/light-v10',
+        tileSize: 512,
+        zoomOffset: -1
+    }).addTo(mymap);
+    L.marker([56.876285, -5.431914]).addTo(mymap).bindPopup("<b>Tren a Hogwartz</b>. Glenfinnan Viaduct, Lochaber, Scotland.");
+    L.marker([56.68282, -5.10598]).addTo(mymap).bindPopup("<b>Partidos Quidditch</b>. Glencoe, Argyll, Scotland.");
+    L.marker([54.773475, -1.576215]).addTo(mymap).bindPopup("<b>Salón Profesora McGonagall</b>. Durham Cathedral, Durham, England.");
+
+    L.marker([55.415783, -1.706078]).addTo(mymap).bindPopup("<Clases de vuelo de escoba>Ep I</b>.Alnwick Castle, Northumberland, England.");
+    L.marker([51.512811, -0.083519]).addTo(mymap).bindPopup("<b>Pub de hechiceros</b>. Leadenhall Market, London, England.");
+    
+
+</script>
+    </body>
+</html>

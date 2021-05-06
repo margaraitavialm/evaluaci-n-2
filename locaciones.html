@@ -21,12 +21,10 @@
                 </div>
             </main>
             <footer>
-               <p><a href="https://github.com/margaraitavialm">Margarita Vial</a> <a href="https://github.com/profesorfaco/dno037-2021">DNO037</a></p>
-
+                 <p><a href="https://github.com/margaraitavialm">Margarita Vial</a> <a href="https://github.com/profesorfaco/dno037-2021">DNO037</a></p>
             </footer>
         </div>
 <script>
-
     var mymap = L.map('mapa').setView([33.5427796,9.9672612], 2);
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
         maxZoom: 18,
@@ -34,14 +32,32 @@
         tileSize: 512,
         zoomOffset: -1
     }).addTo(mymap);
-    L.marker([56.876285, -5.431914]).addTo(mymap).bindPopup("<b>Tren a Hogwartz</b>. Glenfinnan Viaduct, Lochaber, Scotland.");
-    L.marker([56.68282, -5.10598]).addTo(mymap).bindPopup("<b>Partidos Quidditch</b>. Glencoe, Argyll, Scotland.");
-    L.marker([54.773475, -1.576215]).addTo(mymap).bindPopup("<b>Salón Profesora McGonagall</b>. Durham Cathedral, Durham, England.");
+    var icono1 = L.icon({
+            iconUrl: "images/icono-1.png",
+            iconSize:     [40, 32], // size of the icon
+                    });
+        var icono2 = L.icon({
+            iconUrl: "images/icono-2.png",
+            iconSize:     [40, 32], // size of the icon
+                    });
+        var icono3 = L.icon({
+            iconUrl: "images/icono-3.png",
+            iconSize:     [40, 32], // size of the icon
+                    });
+        var icono4 = L.icon({
+            iconUrl: "images/icono-4.png",
+            iconSize:     [40, 32], // size of the icon
+                    });
+        var icono5 = L.icon({
+            iconUrl: "images/icono-5.png",
+            iconSize:     [40, 32], // size of the icon
+                    });
 
-    L.marker([55.415783, -1.706078]).addTo(mymap).bindPopup("<Clases de vuelo de escoba>Ep I</b>.Alnwick Castle, Northumberland, England.");
-    L.marker([51.512811, -0.083519]).addTo(mymap).bindPopup("<b>Pub de hechiceros</b>. Leadenhall Market, London, England.");
-    
-
+        L.marker([51.512811, -0.083519], {icon: icono1}).addTo(mymap).bindPopup("<b>Pub de hechiceros</b>. Leadenhall Market, London, England.");
+        L.marker([55.415783, -1.706078], {icon: icono2}).addTo(mymap).bindPopup("<b>Clases de vuelo en escoba</b>.Alnwick Castle, Northumberland, England.");
+        L.marker([56.68282, -5.10598], {icon: icono3}).addTo(mymap).bindPopup("<b>Partidos Quidditch</b>. Glencoe, Argyll, Scotland.");
+        L.marker([56.876285, -5.431914], {icon: icono4}).addTo(mymap).bindPopup("<b>Tren a Hogwartz</b>. Glenfinnan Viaduct, Lochaber, Scotland.");
+        L.marker([54.773475, -1.576215], {icon: icono5}).addTo(mymap).bindPopup("<b>Salón Profesora McGonagall</b>.Durham Cathedral, Durham, England.");
 </script>
     </body>
 </html>
